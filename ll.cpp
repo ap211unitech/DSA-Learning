@@ -7,7 +7,7 @@ struct node
     node *next;
 };
 
-void Insert(struct node **l, int n)
+void InsertAtEnd(struct node **l, int n)
 {
     struct node *newNode = new node;
     newNode->data = n;
@@ -34,9 +34,28 @@ void Display(struct node *l)
     // }
     if (l != NULL)
     {
-        Display(l->next);
         cout << l->data << " ";
+        Display(l->next);
     }
+}
+
+bool ImproveMentSearch(struct node **l, int key)
+{
+    struct node *copy_of_l = *l;
+    struct node *temp = NULL;
+    while (copy_of_l != NULL)
+    {
+        if (copy_of_l->data == key)
+        {
+            temp->next = copy_of_l->next;
+            copy_of_l->next = *l;
+            *l = copy_of_l;
+            return true;
+        }
+        temp = copy_of_l;
+        copy_of_l = copy_of_l->next;
+    }
+    return false;
 }
 
 int main()
@@ -48,8 +67,16 @@ int main()
     {
         int k;
         cin >> k;
-        Insert(&l, k);
+        InsertAtEnd(&l, k);
     }
     Display(l);
+    cout << endl;
+
+    if (ImproveMentSearch(&l, 6))
+        cout << "Element Found" << endl;
+    else
+        cout << "Element Not Found" << endl;
+    Display(l);
+    cout << endl;
     return 0;
 }
