@@ -1,0 +1,5 @@
+
+Two types of heap
+
+1) Max heap (Greatest element on top) priority_queue<int> maxHeap; 
+2) Min heap (Smallest element on top) priority_queue<int,greater(int)> maxHeap; 
