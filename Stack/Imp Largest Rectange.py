@@ -1,6 +1,6 @@
 
 # One good approach is that find NSL and NSR for arr and take index array which will store NSR[i]-NSL[i]-1.
-# Area , then can be calculated simply. In Some time, this can give TLE.
+# Area , then can be calculated simply. In Some time, this can give TLE. In python , this is giving TLE but not in cpp.
 
 # def NearestSmallerToLeft(arr, n):
 #     i = 0
