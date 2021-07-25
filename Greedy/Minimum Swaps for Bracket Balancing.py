@@ -1,7 +1,7 @@
 
 # Visit - https://practice.geeksforgeeks.org/problems/minimum-swaps-for-bracket-balancing2704/1
 
-def minimumNumberOfSwaps(s: str):
+def minimumNumberOfSwaps(s):
 
     s = [i for i in s]
     v = [i for i in range(len(s)) if s[i] == "["]
@@ -23,3 +23,6 @@ def minimumNumberOfSwaps(s: str):
                 idx += 1
 
     return ans
+
+
+print(minimumNumberOfSwaps(input()))
