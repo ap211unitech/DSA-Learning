@@ -27,10 +27,27 @@ def generate(n, op, res):
 def generateParenthesis(n):
     res = []
     generate(2*n, "", res)
+    # generate(n,n,"",res)
 
     return [i for i in res if isValid(i)]
+
+
+# def generate(open, close, op, res):
+
+#     if open == 0 and close == 0:
+#         res.append(op)
+#         return
+
+#     if open != 0:
+#         op1 = op+"("
+#         generate(open-1, close, op1, res)
+
+#     if close > open:
+#         op2 = op+")"
+#         generate(open, close-1, op2, res)
 
 
 n = int(input())
 
 print(generateParenthesis(n))
+
