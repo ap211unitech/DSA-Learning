@@ -12,7 +12,7 @@ def solve(n, ans, res):
             return
         else:
             ans = ans+chr(int(n[0])+96)
-            print(ans)
+            res.append(ans)
             return
     else:
         if n[0] == '0':
@@ -30,3 +30,4 @@ if len(n) == 0 or n.isspace():
 
 res = []
 solve(n, "", res)
+print(res)
