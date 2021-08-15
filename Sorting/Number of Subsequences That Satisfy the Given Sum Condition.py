@@ -1,3 +1,6 @@
+
+# PROBLEM - https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/
+
 def numSubseq(arr, k):
     arr.sort()
     n = len(arr)
