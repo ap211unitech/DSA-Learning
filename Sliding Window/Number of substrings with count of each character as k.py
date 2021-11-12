@@ -23,7 +23,6 @@ def count_substrings(s,k):
             if Issame(freq,k):
                 count+=1
                 
-            
             freq[s[start]]-=1
                 
             start+=1
@@ -34,7 +33,7 @@ def count_substrings(s,k):
                 
 
 if __name__ == '__main__':
-    s = "aabbcc"
+    s = "ababcd"
     k = 2
     print(count_substrings(s, k))
     s = "aabbc"
