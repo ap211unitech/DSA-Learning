@@ -1,0 +1,7 @@
+
+For any doubt, visit https://www.youtube.com/watch?v=v62IKeJtj0k&list=PL-Jc9J83PIiFJRioti3ZV7QabwoJK6eKe&index=1
+
+There are four type of data type - byte(8 bits), short(16 bits), int(32 bits), long(64 bits)
+
+1) 1's complement - toogle every element
+1) 2's complement - add 1 to 1's complement (according to binary number system)
