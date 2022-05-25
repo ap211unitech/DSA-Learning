@@ -26,7 +26,7 @@ int main()
 
         if (j - i + 1 == k) // Window size == k
         {
-            if (negatives.size() == 0) // Means no negative values till index i
+            if (negatives.size() == 0) // Means no negative values in that window
             {
                 res.push_back(0);
             }
@@ -36,7 +36,7 @@ int main()
                 res.push_back(firstNeg);
             }
 
-            if (arr[i] < 0 && negatives.size() > 0) // index of i is negative, needed to remove
+            if (arr[i] == negatives.front() && negatives.size() > 0) // index of i is negative, needed to remove
             {
                 negatives.pop();
             }
